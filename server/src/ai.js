@@ -1,9 +1,9 @@
 import { GoogleGenAI, Type } from '@google/genai'
 
-const IMAGE_MODEL = 'gemini-2.5-flash-image-preview'
+const IMAGE_MODEL = 'gemini-2.5-flash-image'
 const TEXT_MODEL = 'gemini-flash-lite-latest'
 const ALLOWED_TYPES = [
-  'Normal','Fire','Water','Grass','Electric','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy'
+  'Normal', 'Fire', 'Water', 'Grass', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dragon', 'Dark', 'Steel', 'Fairy'
 ]
 
 function getClient(apiKeyOverride = null) {

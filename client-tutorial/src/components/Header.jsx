@@ -1,5 +1,5 @@
 // ⏸️ WORKSHOP STEP 1: Set Up Routing
-// TODO: Import Link and NavLink from react-router-dom
+import { Link, NavLink } from "react-router-dom";
 
 import ApiKeyPrompt from './ApiKeyPrompt.jsx';
 
@@ -18,10 +18,30 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <ApiKeyPrompt />
-          
+
           <nav className="flex gap-2">
-            {/* ⏸️ WORKSHOP STEP 1: Add NavLink components here */}
-            {/* TODO: Add NavLink to="/" and to="/gallery" */}
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium ${isActive
+                  ? "bg-indigo-600 text-white"
+                  : "text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+                }`
+              }
+            >
+              Generator
+            </NavLink>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md text-sm font-medium ${isActive
+                  ? "bg-indigo-600 text-white"
+                  : "text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700"
+                }`
+              }
+            >
+              Gallery
+            </NavLink>
           </nav>
 
           {/* ⏸️ WORKSHOP STEP 5: Uncomment theme toggle */}
