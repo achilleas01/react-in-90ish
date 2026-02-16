@@ -17,6 +17,7 @@ export default function GalleryPage() {
   const [filterType, setFilterType] = useState("all");
 
   const processedData = useMemo(() => {
+    // throw new Error("Test error for ErrorBoundary"); // For testing ErrorBoundary, remove this line after confirming it works
     let result = [...data];
 
     // Filter by type
